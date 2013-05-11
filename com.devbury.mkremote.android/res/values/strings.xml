@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2009-2013 devBury LLC
+  ~
+  ~   This file is part of mkRemote.
+  ~
+  ~   mkRemote is free software: you can redistribute it and/or modify
+  ~   it under the terms of the GNU General Public License Version 3
+  ~   as published by the Free Software Foundation.
+  ~
+  ~   mkRemote is distributed in the hope that it will be useful,
+  ~   but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~   GNU General Public License for more details.
+  ~
+  ~   You should have received a copy of the GNU General Public License
+  ~   along with mkRemote.  If not, see <http://www.gnu.org/licenses/gpl.txt/>.
+  -->
+
+<resources>
+	<string name="app_name">mkRemote</string>
+
+	<string name="ok">OK</string>
+	<string name="cancel">Cancel</string>
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+
+	<string name="delay">Delay</string>
+	<string name="end_macro">End Macro</string>
+	<string name="delay_title">Number Of Seconds To Delay</string>
+	<string name="confirm_delete">Delete Macro?</string>
+	<string name="confirm_delete_message">Are you sure you wish to delete macro?</string>
+	<string name="delete_macro">Delete Macro</string>
+	<string name="save_macro">Save Macro</string>
+	<string name="no_macros">No Macros Defined. Press Menu To Create One.
+	</string>
+	<string name="abort">Abort</string>
+	<string name="settings">Settings</string>
+	<string name="start_macro">Create Macro</string>
+	<string name="macro_manager">Execute Macro</string>
+	<string name="select_server">Select Server</string>
+	<string name="quick_launch">Quick Launch</string>
+	<string name="about">About</string>
+	<string name="manual_address_id">Custom Server</string>
+	<string name="manual_address_summary">manually enter a server address</string>
+	<string name="server_ip">Address :</string>
+	<string name="server_port">Port :</string>
+	<string name="invalid_custom_server">Error Connecting</string>
+	<string name="invalid_custom_server_summary">Could not connect to the server you specified.
+		Please make sure you entered it correctly and that a mkRemote server
+		is running at that address.</string>
+	<string name="full_version">Full Version Upgrade</string>
+	<string name="full_version_message">Want to remove this window and ads? Please consider
+		upgrading to the full version of mkRemote.
+    </string>
+	<string name="download">Download</string>
+	<string name="maybe_later">No Thanks</string>
+
+	<string name="looking_for_servers">Looking For Servers</string>
+	<string name="password">Password</string>
+	<string name="invalid_password_message">Your password is incorrect</string>
+	<string name="invalid_password">Invalid Password!</string>
+	<string name="connection_error">Connection Error</string>
+	<string name="connection_error_message">A problem has occurred with the connection to the
+		server and you have been disconnected. Is the server still running?
+	</string>
+	<string name="no_servers_found">No servers found</string>
+	<string name="no_servers_found_1_5_summary">Could not find any mkRemote servers on the
+		local
+		network. Is one running? Go to www.devbury.com to download the
+		mkRemote server software. Auto server discovery does not work in
+		Android 1.5.
+	</string>
+
+	<string name="no_servers_found_summary">Could not find any mkRemote servers on the
+		local
+		network. Is one running? Go to www.devbury.com to download the
+		mkRemote server software.
+	</string>
+
+	<string name="trackball_on_title">Trackball Movement</string>
+	<string name="trackball_on_summary">Moving trackball moves the mouse</string>
+	<string name="trackball_scroll_up_down_on_title">Trackball Up/Down</string>
+	<string name="trackball_scroll_up_down_on_summary">Moving trackball acts as up and down arrows
+	</string>
+	<string name="trackball_scroll_left_right_on_title">Trackball Left/Right</string>
+	<string name="trackball_scroll_left_right_on_summary">Moving trackball acts as left and right arrows
+	</string>
+	<string name="touchscreen_on_title">Touch Screen Movement</string>
+	<string name="touchscreen_on_summary">Touching screen moves the mouse</string>
+	<string name="touch_click_on_title">Touch Screen Click</string>
+	<string name="touch_click_on_summary">Tapping the screen left clicks the mouse</string>
+	<string name="orientation_on_title">Wave Movement</string>
+	<string name="orientation_on_summary">Waving phone moves the mouse</string>
+
+	<string name="general_settings_category">General Settings</string>
+	<string name="button_settings_category">Button Settings</string>
+	<string name="button_bar_category">Button Bar Settings</string>
+	<string name="active_buttons_category">Active Buttons</string>
+
+	<string name="trackball_key_title">Trackball Click</string>
+	<string name="back_key_title">Back</string>
+	<string name="home_key_title">Home </string>
+	<string name="call_key_title">Call</string>
+	<string name="power_key_title">Power</string>
+	<string name="camera_key_title">Camera Shutter</string>
+	<string name="volume_up_key_title">Volume Up</string>
+	<string name="volume_down_key_title">Volume Down</string>
+	<string name="dpad_center_key_title">D-pad Center</string>
+	<string name="dpad_up_key_title">D-pad Up</string>
+	<string name="dpad_down_key_title">D-pad Down</string>
+	<string name="dpad_left_key_title">D-pad Left</string>
+	<string name="dpad_right_key_title">D-pad Right</string>
+
+	<string name="buttonbar1_settings_title">Button Bar One</string>
+	<string name="buttonbar1_settings_summary">Configure button bar one</string>
+	<string name="buttonbar2_settings_title">Button Bar Two</string>
+	<string name="buttonbar2_settings_summary">Configure button bar two</string>
+
+	<string name="buttonbar1_on_summary">Show button bar one</string>
+	<string name="buttonbar1_on_title">Button Bar One</string>
+	<string name="buttonbar2_on_summary">Show button bar two</string>
+	<string name="buttonbar2_on_title">Button Bar Two</string>
+
+	<string name="vibrate_on_click_title">Vibrate On Mouse Click</string>
+	<string name="vibrate_on_click_summary">Vibrate the phone when a mouse button is pressed
+	</string>
+
+	<string name="left_button_hold">Left mouse click hold</string>
+	<string name="left_button">Left mouse click</string>
+	<string name="middle_button_hold">Middle mouse click hold</string>
+	<string name="middle_button">Middle mouse click</string>
+	<string name="right_button_hold">Right mouse click hold</string>
+	<string name="right_button">Right mouse click</string>
+	<string name="maximize">Maximize</string>
+	<string name="show_virtual_keyboard">Show Virtual Keyboard</string>
+	<string name="not_connected">Not Connected</string>
+	<string name="connected_to">Connected to</string>
+
+	<string name="working">Working</string>
+
+	<string name="no_files">No Quick Launch Files</string>
+	<string name="no_files_message">There are no Quick Launch files to launch in the
+		specified directory.</string>
+	<string name="landscape">Landscape</string>
+	<string name="portrait">Portrait</string>
+	<string name="default_orientation">Default Orientation</string>
+	<string name="default_orientation_summary">Default orientation of the phone display</string>
+	<string name="pageup">Page up</string>
+	<string name="pagedown">Page down</string>
+	<string name="f5">F5</string>
+	<string name="esc">Escape</string>
+	<string name="left_arrow">Left arrow</string>
+	<string name="right_arrow">Right arrow</string>
+	<string name="up_arrow">Up arrow</string>
+	<string name="down_arrow">Down arrow</string>
+	<string name="def">Default</string>
+	<string name="dpad_mouse_on_title">D-pad moves mouse</string>
+	<string name="dpad_mouse_on_summary">Ignore D-pad mappings. Move the mouse instead
+	</string>
+	<string name="wifi_required">No WiFi Connection</string>
+	<string name="wifi_required_summary">A WiFi connection is required to use mkRemote
+	</string>
+	<string name="auto_connect_title">Auto Server Connect</string>
+	<string name="auto_connect_summary">On start up connect to the last known server
+	</string>
+	<string name="auto_connected_to_host">Connected to last server</string>
+	<string name="auto_connect_failed">Failed to connect to last server</string>
+	<string name="change_log">View Change Log</string>
+	<string name="only_in_full_version">Only available in paid version</string>
+	<string name="enter">Enter</string>
+
+	<string name="bluetooth_library">Bluetooth Library</string>
+	<string name="scroll_up">Mouse Wheel Up</string>
+	<string name="scroll_down">Mouse Wheel Down</string>
+	<string name="trackball_wheel_on_title">Trackball Wheel</string>
+	<string name="trackball_wheel_on_summary">Moving trackball acts as up and down mouse wheel
+	</string>
+	<string name="email_error">Email Last Error</string>
+	<string name="email_error_message">The last time you ran mkRemote it crashed. We need
+		your help to fix this error. Please consider emailing us the crash
+		report.</string>
+	<string name="send_email">Send Email</string>
+	<string name="bluetooth_on_title">Enable Bluetooth</string>
+	<string name="bluetooth_on_summary">Allow Bluetooth server discovery</string>
+	<string name="bluetooth_native">NATIVE</string>
+	<string name="bluetooth_native_summary">Android 2.0+</string>
+	<string name="bluetooth_experimental">EXPERIMENTAL</string>
+	<string name="bluetooth_experimental_summary">May work with Android 1.5 and 1.6</string>
+	<string name="bluetooth_none">NONE</string>
+	<string name="bluetooth_none_summary">No Bluetooth library available</string>
+	<string name="dpad_settings_category">D-pad Settings</string>
+	<string name="trackball_settings_category">Trackball Settings</string>
+	<string name="help">Help</string>
+
+	<string name="prevent_sleep_title">Never Sleep</string>
+	<string name="prevent_sleep_summary">Prevent the phone from sleeping</string>
+	<string name="mouse_sensitivity_title">Mouse Speed</string>
+	<string name="slow">Slow</string>
+	<string name="medium">Medium</string>
+	<string name="fast">Fast</string>
+	
+	<string name="toggle_boxee_mode">Toggle Boxee Mode</string>
+	<string name="button_settings_summary">All of these buttons may not be available on your phone</string>
+	<string name="note">Note</string>
+	<string name="search_key_title">Search</string>
+	<string name="camera_focus_key_title">Camera Focus</string>
+	<string name="boxee_category">Boxee / XBMC Settings</string>
+	<string name="boxee_mode">Boxee Mode On</string>
+	<string name="boxee_mode_summary">Run as a Boxee remote</string>
+	<string name="keyboard_locked">Keyboard Locked</string>
+	<string name="keyboard_unlocked">Keyboard Unlocked</string>
+	<string name="server_upgrade">Please upgrade server at devbury.com</string>
+	<string name="wallpaper_on_title">Use Wallpaper</string>
+	<string name="wallpaper_on_summary">Use system wallpaper as background image</string>
+	<string name="notification_bar_on_title">Show Notification Bar</string>
+	<string name="notification_bar_on_summary">Show the system notification bar</string>
+	<string name="long_press_scroll_on_title">Long Press Mouse Wheel</string>
+	<string name="long_press_scroll_on_summary">Mouse wheel up and down during a long press</string>
+	<string name="lock_on_title">Lock Mini-Keyboard</string>
+	<string name="lock_on_summary">Lock the mini-keyboard on startup.</string>
+	
+	<string name="show_videos">Show Help Docs</string>
+	<string name="show_changelog">Show Change Log</string>
+	<string name="loading">Loading Page</string>
+	<string name="devbury">support@devbury.com</string>
+</resources>

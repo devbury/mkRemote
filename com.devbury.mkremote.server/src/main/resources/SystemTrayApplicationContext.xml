@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2009-2013 devBury LLC
+  ~ This file is part of mkRemote.
+  ~
+  ~     mkRemote is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License Version 3
+  ~     as published by the Free Software Foundation.
+  ~
+  ~     mkRemote is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with mkRemote.  If not, see <http://www.gnu.org/licenses/gpl.txt/>.
+  -->
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean name="version" class="com.devbury.mkremote.server.MkRemoteVersion" />
+
+    <bean name="serviceInfo" class="com.devbury.mkremote.server.VersionServiceInfo" init-method="init">
+        <property name="name" value="com.devbury.mkRemote" />
+        <property name="version" ref="version" />
+    </bean>
+
+    <bean name="mouseMoveServiceInfo" class="com.devbury.mkremote.server.VersionServiceInfo" init-method="init">
+        <property name="name" value="com.devbury.mkRemoteMouse" />
+        <property name="version" ref="version" />
+    </bean>
+
+    <bean name="gsonService" class="com.devbury.mkremote.api.GsonJsonService" />
+
+    <bean name="macroRecordJsonService" class="com.devbury.mkremote.server.MacroRecordJsonService">
+        <property name="jsonService" ref="gsonService" />
+        <property name="macroService" ref="macroService" />
+        <property name="mouseAndKeyService" ref="mouseAndKeyService" />
+    </bean>
+
+    <bean name="macroService" class="com.devbury.mkremote.server.MacroServiceImpl">
+        <property name="macroDataStore" ref="preferencesMacroDataStore" />
+        <property name="passwordStorageService" ref="preferencesOptionsStorageService" />
+        <property name="desktopControlService" ref="desktopControlService" />
+        <property name="jsonService" ref="gsonService" />
+    </bean>
+
+    <bean name="boxeeService" class="com.devbury.mkremote.server.boxee.BoxeeService" init-method="init">
+        <property name="optionsStorageService" ref="preferencesOptionsStorageService" />
+        <property name="networkAddressService" ref="networkAddressService" />
+    </bean>
+
+    <bean name="preferencesMacroDataStore" class="com.devbury.mkremote.server.PreferencesMacroDataStore">
+    </bean>
+
+    <bean name="networkAddressService" class="com.devbury.mkremote.server.NetworkAddressServiceImpl">
+        <property name="optionsStorageService" ref="preferencesOptionsStorageService" />
+        <property name="preferredInterface" value="${opt:preferredInterface}" />
+    </bean>
+
+    <bean name="usKeyboardConverter" class="com.devbury.mkremote.server.UsKeyboardConverter" />
+
+    <bean name="quickLaunchService" class="com.devbury.mkremote.server.QuickLaunchServiceImpl">
+        <property name="optionsStorageService" ref="preferencesOptionsStorageService" />
+    </bean>
+
+    <bean name="preferencesOptionsStorageService" class="com.devbury.mkremote.server.PreferencesOptionsStorageService" />
+
+    <bean name="storedPasswordService" class="com.devbury.mkremote.server.StoredPasswordService">
+        <property name="passwordStorageService" ref="preferencesOptionsStorageService" />
+    </bean>
+
+    <bean name="maximizeService" class="com.devbury.mkremote.server.MaximizeServiceImpl">
+        <property name="optionsStorageService" ref="preferencesOptionsStorageService" />
+    </bean>
+
+    <bean name="virtualKeyCodeService" class="com.devbury.mkremote.server.VirtualKeyCodeServiceImpl">
+        <property name="converter" ref="usKeyboardConverter" />
+    </bean>
+
+    <bean name="mouseAndKeyService" class="com.devbury.mkremote.server.RobotMouseAndKeyService">
+        <property name="maximizeService" ref="maximizeService" />
+        <property name="virtualKeyCodeService" ref="virtualKeyCodeService" />
+    </bean>
+
+    <bean name="socketServer" class="com.devbury.mkremote.server.SocketServer" init-method="start" destroy-method="shutdown">
+        <property name="serviceInfo" ref="serviceInfo" />
+        <property name="service" ref="desktopControlService" />
+        <property name="port" value="${opt:tcpPort}" />
+        <property name="networkAddressService" ref="networkAddressService" />
+    </bean>
+
+    <bean name="mouseMoveServer" class="com.devbury.mkremote.server.MouseMoveServer" init-method="start"
+        destroy-method="shutdown">
+        <property name="port" value="${opt:udpPort}" />
+        <property name="mouseAndKeyService" ref="mouseAndKeyService" />
+        <property name="networkAddressService" ref="networkAddressService" />
+        <property name="serviceInfo" ref="mouseMoveServiceInfo" />
+    </bean>
+
+    <bean name="multicastServiceAnnouncer" class="com.devbury.mkremote.server.MulticastServiceAnnouncer"
+        init-method="start" destroy-method="shutdown">
+        <property name="serviceInfo" ref="serviceInfo" />
+        <property name="jsonService" ref="gsonService" />
+    </bean>
+
+    <bean name="bluetoothServer" class="com.devbury.mkremote.server.BluetoothServer" init-method="start"
+        destroy-method="shutdown">
+        <property name="stack" value="${opt:bluecove.stack}" />
+        <property name="service" ref="desktopControlService" />
+    </bean>
+
+    <bean name="bluetoothMouseMoveServer" class="com.devbury.mkremote.server.BluetoothMouseMoveServer" init-method="start"
+        destroy-method="shutdown" depends-on="bluetoothServer">
+        <property name="service" ref="mouseAndKeyService" />
+    </bean>
+
+    <bean name="desktopControlService" class="com.devbury.mkremote.server.DesktopControlService">
+        <property name="jsonService" ref="macroRecordJsonService" />
+        <property name="mouseAndKeyService" ref="mouseAndKeyService" />
+        <property name="unicodeConverter" ref="usKeyboardConverter" />
+        <property name="passwordService" ref="storedPasswordService" />
+        <property name="quickLaunchService" ref="quickLaunchService" />
+        <property name="mouseMoveServiceInfo" ref="mouseMoveServiceInfo" />
+        <property name="macroService" ref="macroService" />
+        <property name="bluetoothServer" ref="bluetoothServer" />
+        <property name="bluetoothMouseMoveServer" ref="bluetoothMouseMoveServer" />
+        <property name="boxeeService" ref="boxeeService" />
+    </bean>
+
+    <bean name="optionsMenuItem" class="com.devbury.mkremote.server.OptionsMenuItem">
+        <property name="optionsDialog" ref="optionsDialog" />
+    </bean>
+
+    <bean name="optionsDialog" class="com.devbury.mkremote.server.OptionsDialog" destroy-method="dispose">
+        <property name="optionsStorageService" ref="preferencesOptionsStorageService" />
+        <property name="multicastServiceAnnouncer" ref="multicastServiceAnnouncer" />
+        <property name="socketServer" ref="socketServer" />
+        <property name="quickLaunchService" ref="quickLaunchService" />
+        <property name="mouseMoveServer" ref="mouseMoveServer" />
+        <property name="networkAddressService" ref="networkAddressService" />
+        <property name="aboutDialog" ref="aboutDialog" />
+        <property name="preferredInterface" value="${opt:preferredInterface}" />
+        <property name="boxeeService" ref="boxeeService" />
+    </bean>
+
+    <bean name="aboutMenuItem" class="com.devbury.mkremote.server.AboutMenuItem">
+        <property name="aboutDialog" ref="aboutDialog" />
+    </bean>
+
+    <bean name="aboutDialog" class="com.devbury.mkremote.server.AboutDialog" destroy-method="dispose">
+        <property name="version" ref="version" />
+        <property name="serviceInfo" ref="serviceInfo" />
+        <property name="bluetoothServer" ref="bluetoothServer" />
+    </bean>
+
+    <bean class="com.devbury.mkremote.server.MkRemoteUpgradeService" init-method="start">
+        <property name="version" ref="version" />
+        <property name="applicationShutdownService" ref="applicationShutdownService" />
+    </bean>
+
+    <bean class="com.devbury.desktoplib.systemtray.TrayIconDefinition">
+        <property name="tooltip" value="mkRemote" />
+        <property name="imageName" value="grey_mouse.png" />
+        <property name="menuItems">
+            <list>
+                <ref bean="optionsMenuItem" />
+                <ref bean="seperatorMenuItem" />
+                <ref bean="aboutMenuItem" />
+                <ref bean="seperatorMenuItem" />
+                <ref bean="exitMenuItem" />
+            </list>
+        </property>
+    </bean>
+
+    <bean class="com.devbury.desktoplib.systemtray.SplashDelay">
+        <property name="delay" value="2" />
+    </bean>
+</beans>

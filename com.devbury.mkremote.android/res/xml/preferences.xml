@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2009-2013 devBury LLC
+  ~
+  ~   This file is part of mkRemote.
+  ~
+  ~   mkRemote is free software: you can redistribute it and/or modify
+  ~   it under the terms of the GNU General Public License Version 3
+  ~   as published by the Free Software Foundation.
+  ~
+  ~   mkRemote is distributed in the hope that it will be useful,
+  ~   but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~   GNU General Public License for more details.
+  ~
+  ~   You should have received a copy of the GNU General Public License
+  ~   along with mkRemote.  If not, see <http://www.gnu.org/licenses/gpl.txt/>.
+  -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:key="@string/c_preference_screen_key" android:orderingFromXml="true">
+	<PreferenceCategory android:title="@string/bluetooth_library">
+		<Preference android:key="@string/c_bluetooth_details"
+			android:selectable="false">
+		</Preference>
+		<CheckBoxPreference android:key="@string/c_bluetooth_on"
+			android:title="@string/bluetooth_on_title" android:summary="@string/bluetooth_on_summary">
+		</CheckBoxPreference>
+	</PreferenceCategory>
+	<PreferenceCategory android:summary="@string/general_settings_category"
+		android:title="@string/general_settings_category">
+		<CheckBoxPreference android:key="@string/c_auto_connect_on"
+			android:title="@string/auto_connect_title" android:summary="@string/auto_connect_summary">
+		</CheckBoxPreference>
+		<CheckBoxPreference android:key="@string/c_wake_lock_on"
+			android:title="@string/prevent_sleep_title" android:summary="@string/prevent_sleep_summary">
+		</CheckBoxPreference>
+		<ListPreference android:key="@string/c_mouse_sensitivity"
+			android:title="@string/mouse_sensitivity_title" android:entryValues="@array/mouse_sensitivity_values"
+			android:entries="@array/mouse_sensitivity_titles">
+		</ListPreference>
+		<ListPreference android:key="@string/c_default_orientation"
+			android:title="@string/default_orientation" android:entries="@array/default_orientation_titles"
+			android:entryValues="@array/default_orientation_values">
+		</ListPreference>
+		<CheckBoxPreference android:key="@string/c_wallpaper_on"
+			android:title="@string/wallpaper_on_title" android:summary="@string/wallpaper_on_summary">
+		</CheckBoxPreference>
+		<CheckBoxPreference android:key="@string/c_notification_bar_on"
+			android:title="@string/notification_bar_on_title" android:summary="@string/notification_bar_on_summary">
+		</CheckBoxPreference>
+		<CheckBoxPreference android:key="@string/c_lock_on"
+			android:title="@string/lock_on_title" android:summary="@string/lock_on_summary">
+		</CheckBoxPreference>
+		<CheckBoxPreference android:key="@string/c_click_vibrate_on"
+			android:title="@string/vibrate_on_click_title" android:summary="@string/vibrate_on_click_summary">
+		</CheckBoxPreference>
+		<CheckBoxPreference android:key="@string/c_touchscreen_on"
+			android:title="@string/touchscreen_on_title" android:summary="@string/touchscreen_on_summary">
+		</CheckBoxPreference>
+		<CheckBoxPreference android:key="@string/c_touch_click_on"
+			android:dependency="@string/c_touchscreen_on" android:title="@string/touch_click_on_title"
+			android:summary="@string/touch_click_on_summary">
+		</CheckBoxPreference>
+		<CheckBoxPreference android:key="@string/c_long_press_scroll_on"
+			android:title="@string/long_press_scroll_on_title" android:summary="@string/long_press_scroll_on_summary">
+		</CheckBoxPreference>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/trackball_settings_category"
+		android:key="@string/trackball_settings_category">
+		<CheckBoxPreference android:key="@string/c_trackball_on"
+			android:title="@string/trackball_on_title" android:summary="@string/trackball_on_summary">
+		</CheckBoxPreference>
+		<CheckBoxPreference android:key="@string/c_trackball_wheel_on"
+			android:title="@string/trackball_wheel_on_title" android:summary="@string/trackball_wheel_on_summary">
+		</CheckBoxPreference>
+		<CheckBoxPreference android:key="@string/c_trackball_scroll_up_down_on"
+			android:title="@string/trackball_scroll_up_down_on_title"
+			android:summary="@string/trackball_scroll_up_down_on_summary">
+		</CheckBoxPreference>
+		<CheckBoxPreference android:key="@string/c_trackball_scroll_left_right_on"
+			android:title="@string/trackball_scroll_left_right_on_title"
+			android:summary="@string/trackball_scroll_left_right_on_summary">
+		</CheckBoxPreference>
+		<ListPreference android:key="@string/c_trackball_key"
+			android:entryValues="@array/key_mapping_values" android:entries="@array/key_mapping_titles"
+			android:title="@string/trackball_key_title">
+		</ListPreference>
+	</PreferenceCategory>
+	<PreferenceCategory android:summary="@string/dpad_settings_category"
+		android:title="@string/dpad_settings_category" android:key="@string/dpad_settings_category">
+		<CheckBoxPreference android:key="@string/c_dpad_mouse_on"
+			android:title="@string/dpad_mouse_on_title" android:summary="@string/dpad_mouse_on_summary">
+		</CheckBoxPreference>
+		<ListPreference android:key="@string/c_dpad_center_key"
+			android:entryValues="@array/key_mapping_values" android:entries="@array/key_mapping_titles"
+			android:title="@string/dpad_center_key_title">
+		</ListPreference>
+		<ListPreference android:key="@string/c_dpad_up_key"
+			android:entryValues="@array/key_mapping_values" android:entries="@array/key_mapping_titles"
+			android:title="@string/dpad_up_key_title">
+		</ListPreference>
+		<ListPreference android:key="@string/c_dpad_down_key"
+			android:entryValues="@array/key_mapping_values" android:entries="@array/key_mapping_titles"
+			android:title="@string/dpad_down_key_title">
+		</ListPreference>
+		<ListPreference android:key="@string/c_dpad_left_key"
+			android:entryValues="@array/key_mapping_values" android:entries="@array/key_mapping_titles"
+			android:title="@string/dpad_left_key_title">
+		</ListPreference>
+		<ListPreference android:key="@string/c_dpad_right_key"
+			android:entryValues="@array/key_mapping_values" android:entries="@array/key_mapping_titles"
+			android:title="@string/dpad_right_key_title">
+		</ListPreference>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/boxee_category">
+		<CheckBoxPreference android:key="@string/c_boxee_mode_on"
+			android:title="@string/boxee_mode" android:summary="@string/boxee_mode_summary">
+		</CheckBoxPreference>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/button_bar_category">
+		<PreferenceScreen android:title="@string/buttonbar1_settings_title"
+			android:summary="@string/buttonbar1_settings_summary">
+			<PreferenceCategory android:title="@string/button_bar_category">
+				<CheckBoxPreference android:key="@string/c_buttonbar1_on"
+					android:title="@string/buttonbar1_on_title" android:summary="@string/buttonbar1_on_summary">
+				</CheckBoxPreference>
+			</PreferenceCategory>
+			<PreferenceCategory android:title="@string/active_buttons_category">
+				<CheckBoxPreference android:key="@string/c_buttonbar1_lefthold_on"
+					android:dependency="@string/c_buttonbar1_on" android:title="@string/left_button_hold">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar1_left_on"
+					android:dependency="@string/c_buttonbar1_on" android:title="@string/left_button">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar1_middlehold_on"
+					android:dependency="@string/c_buttonbar1_on" android:title="@string/middle_button_hold">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar1_middle_on"
+					android:dependency="@string/c_buttonbar1_on" android:title="@string/middle_button">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar1_right_on"
+					android:dependency="@string/c_buttonbar1_on" android:title="@string/right_button">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar1_righthold_on"
+					android:dependency="@string/c_buttonbar1_on" android:title="@string/right_button_hold">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar1_esc_on"
+					android:dependency="@string/c_buttonbar1_on" android:title="@string/esc">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar1_f5_on"
+					android:dependency="@string/c_buttonbar1_on" android:title="@string/f5">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar1_pageup_on"
+					android:dependency="@string/c_buttonbar1_on" android:title="@string/pageup">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar1_pagedown_on"
+					android:dependency="@string/c_buttonbar1_on" android:title="@string/pagedown">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar1_enter_on"
+					android:dependency="@string/c_buttonbar1_on" android:title="@string/enter">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar1_maximize_on"
+					android:dependency="@string/c_buttonbar1_on" android:title="@string/maximize">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar1_show_virtual_keyboard_on"
+					android:dependency="@string/c_buttonbar1_on" android:title="@string/show_virtual_keyboard">
+				</CheckBoxPreference>
+			</PreferenceCategory>
+		</PreferenceScreen>
+
+		<PreferenceScreen android:title="@string/buttonbar2_settings_title"
+			android:summary="@string/buttonbar2_settings_summary">
+			<PreferenceCategory android:title="@string/button_bar_category">
+				<CheckBoxPreference android:key="@string/c_buttonbar2_on"
+					android:title="@string/buttonbar2_on_title" android:summary="@string/buttonbar2_on_summary">
+				</CheckBoxPreference>
+			</PreferenceCategory>
+			<PreferenceCategory android:title="@string/active_buttons_category">
+				<CheckBoxPreference android:key="@string/c_buttonbar2_lefthold_on"
+					android:dependency="@string/c_buttonbar2_on" android:title="@string/left_button_hold">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar2_left_on"
+					android:dependency="@string/c_buttonbar2_on" android:title="@string/left_button">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar2_middlehold_on"
+					android:dependency="@string/c_buttonbar2_on" android:title="@string/middle_button_hold">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar2_middle_on"
+					android:dependency="@string/c_buttonbar2_on" android:title="@string/middle_button">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar2_right_on"
+					android:dependency="@string/c_buttonbar2_on" android:title="@string/right_button">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar2_righthold_on"
+					android:dependency="@string/c_buttonbar2_on" android:title="@string/right_button_hold">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar2_esc_on"
+					android:dependency="@string/c_buttonbar2_on" android:title="@string/esc">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar2_f5_on"
+					android:dependency="@string/c_buttonbar2_on" android:title="@string/f5">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar2_pageup_on"
+					android:dependency="@string/c_buttonbar2_on" android:title="@string/pageup">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar2_pagedown_on"
+					android:dependency="@string/c_buttonbar2_on" android:title="@string/pagedown">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar2_enter_on"
+					android:dependency="@string/c_buttonbar2_on" android:title="@string/enter">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar2_maximize_on"
+					android:dependency="@string/c_buttonbar2_on" android:title="@string/maximize">
+				</CheckBoxPreference>
+				<CheckBoxPreference android:key="@string/c_buttonbar2_show_virtual_keyboard_on"
+					android:dependency="@string/c_buttonbar2_on" android:title="@string/show_virtual_keyboard">
+				</CheckBoxPreference>
+			</PreferenceCategory>
+		</PreferenceScreen>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/button_settings_category">
+		<Preference android:title="@string/note" android:summary="@string/button_settings_summary">
+		</Preference>
+		<ListPreference android:key="@string/c_call_key"
+			android:entryValues="@array/key_mapping_values" android:entries="@array/key_mapping_titles"
+			android:title="@string/call_key_title">
+		</ListPreference>
+		<ListPreference android:key="@string/c_back_key"
+			android:entryValues="@array/key_mapping_values" android:entries="@array/key_mapping_titles"
+			android:title="@string/back_key_title">
+		</ListPreference>
+		<ListPreference android:key="@string/c_camera_key"
+			android:entryValues="@array/key_mapping_values" android:entries="@array/key_mapping_titles"
+			android:title="@string/camera_key_title">
+		</ListPreference>
+		<ListPreference android:key="@string/c_camera_focus_key"
+			android:entryValues="@array/key_mapping_values" android:entries="@array/key_mapping_titles"
+			android:title="@string/camera_focus_key_title">
+		</ListPreference>
+		<ListPreference android:key="@string/c_search_key"
+			android:entryValues="@array/key_mapping_values" android:entries="@array/key_mapping_titles"
+			android:title="@string/search_key_title">
+		</ListPreference>
+		<ListPreference android:key="@string/c_volume_up_key"
+			android:entryValues="@array/key_mapping_values" android:entries="@array/key_mapping_titles"
+			android:title="@string/volume_up_key_title">
+		</ListPreference>
+		<ListPreference android:key="@string/c_volume_down_key"
+			android:entryValues="@array/key_mapping_values" android:entries="@array/key_mapping_titles"
+			android:title="@string/volume_down_key_title">
+		</ListPreference>
+	</PreferenceCategory>
+</PreferenceScreen>

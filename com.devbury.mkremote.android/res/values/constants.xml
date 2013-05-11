@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2009-2013 devBury LLC
+  ~
+  ~   This file is part of mkRemote.
+  ~
+  ~   mkRemote is free software: you can redistribute it and/or modify
+  ~   it under the terms of the GNU General Public License Version 3
+  ~   as published by the Free Software Foundation.
+  ~
+  ~   mkRemote is distributed in the hope that it will be useful,
+  ~   but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~   GNU General Public License for more details.
+  ~
+  ~   You should have received a copy of the GNU General Public License
+  ~   along with mkRemote.  If not, see <http://www.gnu.org/licenses/gpl.txt/>.
+  -->
+
+<resources>
+	<string name="c_default">0</string>
+	<string name="c_left_mouse_click">1</string>
+	<string name="c_middle_mouse_click">2</string>
+	<string name="c_right_mouse_click">3</string>
+	<string name="c_left_mouse_hold">4</string>
+	<string name="c_middle_mouse_hold">5</string>
+	<string name="c_right_mouse_hold">6</string>
+	<string name="c_up_arrow">7</string>
+	<string name="c_down_arrow">8</string>
+	<string name="c_page_up">9</string>
+	<string name="c_page_down">10</string>
+
+	<string name="c_touchscreen_on">11</string>
+	<string name="c_trackball_on">12</string>
+	<string name="c_orientation_on">13</string>
+	<string name="c_buttonbar1_on">14</string>
+	<string name="c_buttonbar2_on">15</string>
+
+	<string name="c_buttonbar1_lefthold_on">16</string>
+	<string name="c_buttonbar1_left_on">17</string>
+	<string name="c_buttonbar1_middle_on">18</string>
+	<string name="c_buttonbar1_middlehold_on">19</string>
+	<string name="c_buttonbar1_right_on">20</string>
+	<string name="c_buttonbar1_righthold_on">21</string>
+
+	<string name="c_buttonbar2_lefthold_on">22</string>
+	<string name="c_buttonbar2_left_on">23</string>
+	<string name="c_buttonbar2_middle_on">24</string>
+	<string name="c_buttonbar2_middlehold_on">25</string>
+	<string name="c_buttonbar2_right_on">26</string>
+	<string name="c_buttonbar2_righthold_on">27</string>
+
+	<string name="c_call_key">28</string>
+	<string name="c_home_key">29</string>
+	<string name="c_back_key">30</string>
+	<string name="c_power_key">31</string>
+	<string name="c_camera_key">32</string>
+	<string name="c_volume_up_key">33</string>
+	<string name="c_volume_down_key">34</string>
+	<string name="c_trackball_key">35</string>
+	<string name="c_maximize">36</string>
+	<string name="c_buttonbar1_maximize_on">37</string>
+	<string name="c_buttonbar2_maximize_on">38</string>
+	<string name="c_touch_click_on">39</string>
+	<string name="c_trackball_scroll_up_down_on">40</string>
+	<string name="c_click_vibrate_on">41</string>
+	<string name="c_show_virtual_keyboard">42</string>
+	<string name="c_buttonbar1_show_virtual_keyboard_on">43</string>
+	<string name="c_buttonbar2_show_virtual_keyboard_on">44</string>
+	<string name="c_portrait">45</string>
+	<string name="c_landscape">46</string>
+	<string name="c_default_orientation">47</string>
+	<string name="c_trackball_scroll_left_right_on">48</string>
+	<string name="c_buttonbar1_pageup_on">49</string>
+    <string name="c_buttonbar1_pagedown_on">50</string>
+    <string name="c_buttonbar2_pageup_on">51</string>
+    <string name="c_buttonbar2_pagedown_on">52</string>
+    <string name="c_f5">53</string>
+    <string name="c_buttonbar1_f5_on">54</string>
+    <string name="c_buttonbar2_f5_on">55</string>
+    <string name="c_esc">56</string>
+    <string name="c_buttonbar1_esc_on">57</string>
+    <string name="c_buttonbar2_esc_on">58</string>
+    <string name="c_dpad_down_key">59</string>
+    <string name="c_dpad_up_key">60</string>
+    <string name="c_dpad_right_key">61</string>
+    <string name="c_dpad_left_key">62</string>
+    <string name="c_dpad_center_key">63</string>
+    <string name="c_right_arrow">64</string>
+    <string name="c_left_arrow">65</string>
+    <string name="c_dpad_mouse_on">66</string>
+    <string name="c_auto_connect_on">67</string>
+    <string name="c_enter">68</string>
+    <string name="c_buttonbar1_enter_on">69</string>
+    <string name="c_buttonbar2_enter_on">70</string>
+    <string name="c_bluetooth_on">71</string>
+    <string name="c_scroll_up">72</string>
+    <string name="c_scroll_down">73</string>
+    <string name="c_trackball_wheel_on">74</string>
+    <string name="c_bluetooth_details">75</string>
+    <string name="c_wake_lock_on">76</string>
+    <string name="c_mouse_sensitivity">77</string>
+    <string name="c_toggle_boxee_mode">78</string>
+    <string name="c_boxee_mode_on">79</string>
+    <string name="c_boxee_volume_up">80</string>
+    <string name="c_boxee_volume_down">81</string>
+    <string name="c_preference_screen_key">82</string>
+    <string name="c_camera_focus_key">83</string>
+    <string name="c_search_key">84</string>  
+    <string name="c_long_press_scroll_on">85</string>
+    <string name="c_wallpaper_on">86</string>
+    <string name="c_notification_bar_on">87</string>
+    <string name="c_lock_on">88</string>
+</resources>

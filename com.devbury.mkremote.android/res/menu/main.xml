@@ -1,0 +1,32 @@
+<!--
+  ~ Copyright (c) 2009-2013 devBury LLC
+  ~
+  ~   This file is part of mkRemote.
+  ~
+  ~   mkRemote is free software: you can redistribute it and/or modify
+  ~   it under the terms of the GNU General Public License Version 3
+  ~   as published by the Free Software Foundation.
+  ~
+  ~   mkRemote is distributed in the hope that it will be useful,
+  ~   but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~   GNU General Public License for more details.
+  ~
+  ~   You should have received a copy of the GNU General Public License
+  ~   along with mkRemote.  If not, see <http://www.gnu.org/licenses/gpl.txt/>.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/select_server" android:title="@string/select_server"
+		android:icon="@android:drawable/ic_menu_search"></item>
+	<item android:id="@+id/quick_launch" android:title="@string/quick_launch"
+		android:icon="@android:drawable/ic_menu_rotate"></item>
+	<item android:id="@+id/macro_manager" android:title="@string/macro_manager"
+		android:icon="@android:drawable/ic_menu_agenda"></item>
+	<item android:id="@+id/show_keyboard" android:title="@string/show_virtual_keyboard"
+		android:icon="@drawable/keyboard_menu"></item>
+	<item android:id="@+id/settings" android:title="@string/settings"
+		android:icon="@android:drawable/ic_menu_preferences"></item>
+	<item android:id="@+id/about" android:title="@string/about"
+		android:icon="@android:drawable/ic_menu_info_details"></item>
+</menu>

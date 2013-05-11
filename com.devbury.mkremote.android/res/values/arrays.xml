@@ -1,0 +1,84 @@
+<!--
+  ~ Copyright (c) 2009-2013 devBury LLC
+  ~
+  ~   This file is part of mkRemote.
+  ~
+  ~   mkRemote is free software: you can redistribute it and/or modify
+  ~   it under the terms of the GNU General Public License Version 3
+  ~   as published by the Free Software Foundation.
+  ~
+  ~   mkRemote is distributed in the hope that it will be useful,
+  ~   but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~   GNU General Public License for more details.
+  ~
+  ~   You should have received a copy of the GNU General Public License
+  ~   along with mkRemote.  If not, see <http://www.gnu.org/licenses/gpl.txt/>.
+  -->
+
+<resources>
+	<string-array name="key_mapping_titles">
+		<item>@string/def</item>
+		<item>@string/left_button_hold</item>
+		<item>@string/left_button</item>
+		<item>@string/middle_button</item>
+		<item>@string/middle_button_hold</item>
+		<item>@string/right_button</item>
+		<item>@string/right_button_hold</item>
+		<item>@string/toggle_boxee_mode</item>
+		<item>@string/esc</item>
+		<item>@string/f5</item>
+		<item>@string/pageup</item>
+		<item>@string/pagedown</item>
+		<item>@string/enter</item>
+		<item>@string/maximize</item>
+		<item>@string/up_arrow</item>
+		<item>@string/down_arrow</item>
+		<item>@string/right_arrow</item>
+		<item>@string/left_arrow</item>
+		<item>@string/show_virtual_keyboard</item>
+		<item>@string/scroll_up</item>
+		<item>@string/scroll_down</item>
+	</string-array>
+	<string-array name="key_mapping_values">
+		<item>@string/c_default</item>
+		<item>@string/c_left_mouse_hold</item>
+		<item>@string/c_left_mouse_click</item>
+		<item>@string/c_middle_mouse_click</item>
+		<item>@string/c_middle_mouse_hold</item>
+		<item>@string/c_right_mouse_click</item>
+		<item>@string/c_right_mouse_hold</item>
+		<item>@string/c_toggle_boxee_mode</item>
+		<item>@string/c_esc</item>
+		<item>@string/c_f5</item>
+		<item>@string/c_page_up</item>
+		<item>@string/c_page_down</item>
+		<item>@string/c_enter</item>
+		<item>@string/c_maximize</item>
+		<item>@string/c_up_arrow</item>
+		<item>@string/c_down_arrow</item>
+		<item>@string/c_right_arrow</item>
+		<item>@string/c_left_arrow</item>
+		<item>@string/c_show_virtual_keyboard</item>
+		<item>@string/c_scroll_up</item>
+		<item>@string/c_scroll_down</item>
+	</string-array>
+	<string-array name="default_orientation_titles">
+		<item>@string/portrait</item>
+		<item>@string/landscape</item>
+	</string-array>
+	<string-array name="default_orientation_values">
+		<item>@string/c_portrait</item>
+		<item>@string/c_landscape</item>
+	</string-array>
+	<string-array name="mouse_sensitivity_titles">
+		<item>@string/slow</item>
+		<item>@string/medium</item>
+		<item>@string/fast</item>
+	</string-array>
+	<string-array name="mouse_sensitivity_values">
+		<item>1</item>
+		<item>2</item>
+		<item>4</item>
+	</string-array>
+</resources>

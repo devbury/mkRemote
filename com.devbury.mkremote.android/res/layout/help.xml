@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2009-2013 devBury LLC
+  ~
+  ~   This file is part of mkRemote.
+  ~
+  ~   mkRemote is free software: you can redistribute it and/or modify
+  ~   it under the terms of the GNU General Public License Version 3
+  ~   as published by the Free Software Foundation.
+  ~
+  ~   mkRemote is distributed in the hope that it will be useful,
+  ~   but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~   GNU General Public License for more details.
+  ~
+  ~   You should have received a copy of the GNU General Public License
+  ~   along with mkRemote.  If not, see <http://www.gnu.org/licenses/gpl.txt/>.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<RelativeLayout android:id="@+id/help_header"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_alignParentTop="true" android:background="@color/help_background">
+		<ImageView android:id="@+id/help_logo" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true"
+			android:layout_centerHorizontal="true" android:src="@drawable/logo">
+		</ImageView>
+		<TextView android:id="@+id/version" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_below="@id/help_logo"
+			android:textStyle="bold" android:textColor="@android:color/white"
+			android:layout_alignRight="@id/help_logo">
+		</TextView>
+		<TextView android:id="@+id/devbury" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_alignRight="@id/help_logo"
+			android:textStyle="bold" android:textColor="@android:color/white"
+			android:text="@string/devbury" android:layout_below="@id/version">
+		</TextView>
+		<Button android:id="@+id/toggle" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_alignParentTop="true"
+			android:layout_alignParentRight="true" android:layout_marginTop="35dip"
+			android:layout_marginRight="10dip">
+		</Button>
+	</RelativeLayout>
+	<android.webkit.WebView android:id="@+id/web"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_below="@id/help_header"
+		android:layout_alignParentBottom="true">
+	</android.webkit.WebView>
+</RelativeLayout>

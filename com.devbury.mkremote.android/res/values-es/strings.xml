@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2009-2013 devBury LLC
+  ~
+  ~   This file is part of mkRemote.
+  ~
+  ~   mkRemote is free software: you can redistribute it and/or modify
+  ~   it under the terms of the GNU General Public License Version 3
+  ~   as published by the Free Software Foundation.
+  ~
+  ~   mkRemote is distributed in the hope that it will be useful,
+  ~   but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~   GNU General Public License for more details.
+  ~
+  ~   You should have received a copy of the GNU General Public License
+  ~   along with mkRemote.  If not, see <http://www.gnu.org/licenses/gpl.txt/>.
+  -->
+
+<resources>
+	<string name="app_name"> mkRemote</string>
+	<string name="ok"> OK </string>
+	<string name="cancel"> Cancelar </string>
+	<string name="yes"> Sí </string>
+	<string name="no"> n </string>
+	<string name="delay"> Delay </string>
+	<string name="end_macro"> End Macro </string>
+	<string name="delay_title"> Número De Segundos De Retardo Cadena </string>
+	<string name="confirm_delete"> Eliminar Macro? </string>
+	<string name="confirm_delete_message"> ¿Estás seguro de que desea eliminar la macro?
+	</string>
+	<string name="delete_macro"> Eliminar Macro </string>
+	<string name="save_macro"> Guardar Macro </string>
+	<string name="no_macros"> No Macros Definidas. Pulse Menú Para Crear Una.
+	</string>
+	<string name="abort"> Abortar </string>
+	<string name="settings"> Configuración </string>
+	<string name="start_macro"> Crear Macro </string>
+	<string name="macro_manager"> Ejecutar Macros </string>
+	<string name="select_server"> Seleccione El Servidor </string>
+	<string name="quick_launch"> De Inicio Rápido </string>
+	<string name="about"> Acerca De </string>
+	<string name="manual_address_id"> Servidor Personalizados </string>
+	<string name="manual_address_summary"> introducir manualmente la dirección del servidor
+	</string>
+	<string name="server_ip"> IP del servidor: </string>
+	<string name="server_port"> Puerto: </string>
+	<string name="invalid_custom_server"> Error Al Conectar </string>
+	<string name="invalid_custom_server_summary"> No se pudo conectar con el servidor que ha
+		especificado.
+		Por favor, asegúrese de que ha introducido correctamente
+		y que un
+		servidor mkRemote
+		se está ejecutando en esa dirección. </string>
+
+	<string name="full_version"> Versión Completa De Actualización </string>
+	<string name="full_version_message"> ¿Quieres eliminar esta ventana? Favor de
+		considerar la
+		la actualización a la versión completa de mkRemote.
+	</string>
+	<string name="download"> Descargar </string>
+	<string name="maybe_later"> No, gracias, tal vez más tarde </string>
+
+	<string name="looking_for_servers"> Buscando Servidores </string>
+	<string name="password"> Contraseña </string>
+	<string name="invalid_password_message"> Su contraseña es incorrecta </string>
+	<string name="invalid_password"> Contraseña No Válida </string>
+	<string name="connection_error"> Error De Conexión </string>
+	<string name="connection_error_message"> Ha producido un problema con la conexión a la
+		servidor y se le ha desconectado. Es el servidor sigue funcionando?
+	</string>
+	<string name="no_servers_found"> No se encontraron servidores </string>
+	<string name="no_servers_found_1_5_summary">No se pudo encontrar ningún servidor mkRemote en la
+		locales
+		red. Es una marcha? Ir a la www.devbury.com para descargar el
+		software de servidor mkRemote. El descubrimiento automático del servidor no
+		funciona en
+		Android 1.5. Cualquier servidores activos
+		que han sido recientemente conectado a
+		se muestran.
+     </string>
+	<string name="no_servers_found_summary">No se pudo encontrar ningún servidor mkRemote en la
+		locales
+		red. Es una marcha? Ir a la www.devbury.com para descargar el
+		software de servidor mkRemote.</string>
+
+	<string name="trackball_on_title"> Trackball Movimiento </string>
+	<string name="trackball_on_summary"> Trackball mover mueve el ratón </string>
+	<string name="trackball_scroll_up_down_on_title"> Trackball Arriba / Abajo </string>
+	<string name="trackball_scroll_up_down_on_summary"> Moving actos trackball como flechas arriba y abajo
+	</string>
+	<string name="trackball_scroll_left_right_on_title"> Trackball Izquierda / Derecha </string>
+	<string name="trackball_scroll_left_right_on_summary"> Trackball movimiento actúa como flechas izquierda
+		y derecha
+</string>
+	<string name="touchscreen_on_title"> Pantalla Táctil Movimiento </string>
+	<string name="touchscreen_on_summary"> Pantalla tocar mueve el ratón </string>
+	<string name="touch_click_on_title"> Pantalla Táctil Click </string>
+	<string name="touch_click_on_summary"> Tocando la pantalla a la izquierda hace clic en el
+		ratón </string>
+	<string name="orientation_on_title"> Wave Movimiento </string>
+	<string name="orientation_on_summary"> Teléfono waving mueve el ratón </string>
+
+	<string name="general_settings_category"> Configuración General </string>
+	<string name="mouse_settings_category"> Mouse Configuración </string>
+	<string name="button_settings_category"> Botón Configuración </string>
+	<string name="button_bar_category"> Barra De Botones </string>
+	<string name="active_buttons_category"> Botones Activos </string>
+
+	<string name="trackball_key_title"> Trackball Haga Clic En </string>
+	<string name="back_key_title"> Volver </string>
+	<string name="home_key_title"> Home </string>
+	<string name="call_key_title"> Call </string>
+	<string name="power_key_title"> Power </string>
+	<string name="camera_key_title"> Cámara De Obturador </string>
+	<string name="volume_up_key_title"> Volumen Subir </string>
+	<string name="volume_down_key_title"> Bajar Volumen </string>
+	<string name="dpad_center_key_title"> D-pad Centro </string>
+	<string name="dpad_up_key_title"> D-pad Arriba </string>
+	<string name="dpad_down_key_title"> D-pad Abajo </string>
+	<string name="dpad_left_key_title"> D-pad Izquierda </string>
+	<string name="dpad_right_key_title"> D-pad Derecha </string>
+
+	<string name="buttonbar1_settings_title"> Una Barra De Botones </string>
+	<string name="buttonbar1_settings_summary"> Bar botón configurar una </string>
+	<string name="buttonbar2_settings_title"> Barra De Botones De Dos </string>
+	<string name="buttonbar2_settings_summary"> Bar botón configurar dos </string>
+
+	<string name="buttonbar1_on_summary"> Mostrar una barra de botones </string>
+	<string name="buttonbar1_on_title"> Una Barra De Botones </string>
+	<string name="buttonbar2_on_summary"> Barra de botones mostrar los dos </string>
+	<string name="buttonbar2_on_title"> Barra De Botones De Dos </string>
+
+	<string name="vibrate_on_click_title"> De Vibración Del Mouse </string>
+	<string name="vibrate_on_click_summary"> Vibrar el teléfono cuando se presiona un botón del
+		ratón
+</string>
+
+	<string name="left_button_hold"> Izquierdo del ratón, haga clic en espera </string>
+	<string name="left_button"> Click izquierdo del ratón </string>
+	<string name="middle_button_hold"> Medio del ratón, haga clic en espera </string>
+	<string name="middle_button"> Clic del ratón Medio </string>
+	<string name="right_button_hold"> Haga clic con el ratón celebrar </string>
+	<string name="right_button"> Haga clic derecho del ratón </string>
+	<string name="maximize"> Maximizar </string>
+	<string name="show_virtual_keyboard"> Mostrar Teclado Virtual </string>
+	<string name="not_connected"> No Conectado </string>
+	<string name="connected_to"> Conectado a </string>
+
+	<string name="working"> De Trabajo </string>
+
+	<string name="no_files"> No Files Inicio Rápido Archivos </string>
+	<string name="no_files_message"> No hay archivos de inicio rápido para lanzar en el
+		directorio especificado. </string>
+	<string name="landscape"> Paisaje </string>
+	<string name="portrait"> Retrato </string>
+	<string name="default_orientation"> Defecto Orientación </string>
+	<string name="default_orientation_summary"> Orientación predeterminada de la pantalla del
+		teléfono </string>
+	<string name="pageup"> Page Up Cadena </string>
+	<string name="pagedown"> Page Down </string>
+	<string name="f5"> F5 </string>
+	<string name="esc"> Escape </string>
+	<string name="left_arrow"> Flecha izquierda </string>
+	<string name="right_arrow"> Flecha derecha </string>
+	<string name="up_arrow"> Flecha hacia arriba </string>
+	<string name="down_arrow"> Flecha hacia abajo </string>
+	<string name="def"> Defecto </string>
+	<string name="dpad_mouse_on_title"> D-pad Se Mueve El Ratón </string>
+	<string name="dpad_mouse_on_summary"> No haga caso de las asignaciones de D-pad. Mueva
+		el ratón en vez </string>
+	<string name="wifi_required">No hay conexión WiFi</string>
+	<string name="wifi_required_summary">Una conexión WiFi es necesario para utilizar
+		mkRemote
+	</string>
+	<string name="auto_connect_title">Servidor de conexión automática de</string>
+	<string name="auto_connect_summary">El arranque conectar con el servidor conocido
+		última
+    </string>
+	<string name="auto_connected_to_host">Conectado al último servidor</string>
+	<string name="auto_connect_failed">No se pudo conectar al servidor de última</string>
+	<string name="only_in_full_version">Sólo disponible en versión completa</string>
+
+</resources>

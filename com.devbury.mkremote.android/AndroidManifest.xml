@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2009-2013 devBury LLC
+  ~
+  ~   This file is part of mkRemote.
+  ~
+  ~   mkRemote is free software: you can redistribute it and/or modify
+  ~   it under the terms of the GNU General Public License Version 3
+  ~   as published by the Free Software Foundation.
+  ~
+  ~   mkRemote is distributed in the hope that it will be useful,
+  ~   but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~   GNU General Public License for more details.
+  ~
+  ~   You should have received a copy of the GNU General Public License
+  ~   along with mkRemote.  If not, see <http://www.gnu.org/licenses/gpl.txt/>.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.devbury.mkremote" android:versionName="1.14.2"
+	android:versionCode="19">
+	<application android:name="com.devbury.mkremote.MkRemoteApplication"
+		android:label="mkRemote" android:icon="@drawable/grey_mouse">
+		<meta-data android:name="MIN_SERVER_VERSION" android:value="14" />
+		<activity android:name="com.devbury.mkremote.activity.MkRemoteServerSelection"
+			android:theme="@android:style/Theme.Black.NoTitleBar"
+			android:configChanges="locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale">
+		</activity>
+		<activity android:name="com.devbury.mkremote.activity.Main"
+			android:label="mkRemote" android:theme="@style/MainTheme"
+			android:configChanges="touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.devbury.mkremote.activity.CustomPreferences"
+			android:theme="@android:style/Theme.Black.NoTitleBar"
+			android:configChanges="locale|keyboardHidden|orientation|fontScale">
+		</activity>
+		<activity android:name="com.devbury.mkremote.activity.QuickLaunchActivity"
+			android:theme="@android:style/Theme.Black.NoTitleBar"
+			android:configChanges="locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale">
+		</activity>
+		<activity android:name="com.devbury.mkremote.activity.MacroManager"
+			android:theme="@android:style/Theme.Black.NoTitleBar"
+			android:configChanges="locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale">
+		</activity>
+		<activity android:name="com.devbury.mkremote.activity.Help"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:configChanges="locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale">
+        </activity>
+		<meta-data android:value="a14b02396b908cf" android:name="ADMOB_PUBLISHER_ID" />
+	</application>
+	<uses-sdk android:minSdkVersion="3" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+</manifest> 

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2009-2013 devBury LLC
+  ~
+  ~   This file is part of mkRemote.
+  ~
+  ~   mkRemote is free software: you can redistribute it and/or modify
+  ~   it under the terms of the GNU General Public License Version 3
+  ~   as published by the Free Software Foundation.
+  ~
+  ~   mkRemote is distributed in the hope that it will be useful,
+  ~   but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~   GNU General Public License for more details.
+  ~
+  ~   You should have received a copy of the GNU General Public License
+  ~   along with mkRemote.  If not, see <http://www.gnu.org/licenses/gpl.txt/>.
+  -->
+
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+	android:keyWidth="6.67%p" android:horizontalGap="0px"
+	android:verticalGap="0px" android:keyHeight="16.667%p">
+	<Row>
+		<Key android:keyEdgeFlags="left" android:keyWidth="11.97%p"
+			android:codes="-100" android:keyIcon="@drawable/ic_delete" />
+		<Key android:codes="-101" android:horizontalGap="1.5%p"
+			android:keyLabel="Esc" />
+		<Key android:codes="-102" android:keyLabel="F1" />
+		<Key android:codes="-103" android:keyLabel="F2" />
+		<Key android:codes="-104" android:keyLabel="F3" />
+		<Key android:codes="-105" android:keyLabel="F4" />
+		<Key android:codes="-106" android:keyLabel="F5" />
+		<Key android:codes="-107" android:keyLabel="F6" />
+		<Key android:codes="-108" android:keyLabel="F7" />
+		<Key android:codes="-109" android:keyLabel="F8" />
+		<Key android:codes="-110" android:keyLabel="F9" />
+		<Key android:codes="-111" android:keyLabel="F10" />
+		<Key android:codes="-112" android:keyLabel="F11" />
+		<Key android:codes="-113" android:keyEdgeFlags="right"
+			android:keyLabel="F12" />
+	</Row>
+	<Row>
+		<Key android:keyEdgeFlags="left" android:keyLabel="~" />
+		<Key android:keyLabel="!" />
+		<Key android:keyLabel="\@" />
+		<Key android:keyLabel="#" />
+		<Key android:keyLabel="$" />
+		<Key android:keyLabel="%" />
+		<Key android:keyLabel="^" />
+		<Key android:keyLabel="&amp;" />
+		<Key android:keyLabel="*" />
+		<Key android:keyLabel="(" />
+		<Key android:keyLabel=")" />
+		<Key android:keyLabel="_" />
+		<Key android:keyLabel="+" />
+		<Key android:isRepeatable="true" android:codes="-5"
+			android:keyIcon="@drawable/backspace" android:keyWidth="13.34%p"
+			android:keyEdgeFlags="right" />
+	</Row>
+	<Row>
+		<Key android:codes="-114" android:keyEdgeFlags="left"
+			android:keyWidth="10%p" android:keyIcon="@drawable/sym_keyboard_tab" />
+		<Key android:keyLabel="Q" />
+		<Key android:keyLabel="W" />
+		<Key android:keyLabel="E" />
+		<Key android:keyLabel="R" />
+		<Key android:keyLabel="T" />
+		<Key android:keyLabel="Y" />
+		<Key android:keyLabel="U" />
+		<Key android:keyLabel="I" />
+		<Key android:keyLabel="O" />
+		<Key android:keyLabel="P" />
+		<Key android:keyLabel="{" />
+		<Key android:keyLabel="}" />
+		<Key android:keyEdgeFlags="right" android:keyWidth="10%p"
+			android:keyLabel="|" />
+	</Row>
+	<Row>
+		<Key android:keyEdgeFlags="left" android:keyWidth="11%p"
+			android:isSticky="true" android:codes="-115" android:keyLabel="Caps" />
+		<Key android:keyLabel="A" />
+		<Key android:keyLabel="S" />
+		<Key android:keyLabel="D" />
+		<Key android:keyLabel="F" />
+		<Key android:keyLabel="G" />
+		<Key android:keyLabel="H" />
+		<Key android:keyLabel="J" />
+		<Key android:keyLabel="K" />
+		<Key android:keyLabel="L" />
+		<Key android:keyLabel=":" />
+		<Key android:keyLabel="&quot;" />
+		<Key android:codes="-4" android:keyEdgeFlags="right"
+			android:keyWidth="15.63%p" android:keyIcon="@drawable/sym_keyboard_return" />
+	</Row>
+	<Row>
+		<Key android:codes="-1" android:keyEdgeFlags="left"
+			android:keyWidth="14.5%p" android:keyIcon="@drawable/sym_keyboard_shift" />
+		<Key android:keyLabel="Z" />
+		<Key android:keyLabel="X" />
+		<Key android:keyLabel="C" />
+		<Key android:keyLabel="V" />
+		<Key android:keyLabel="B" />
+		<Key android:keyLabel="N" />
+		<Key android:keyLabel="M" />
+		<Key android:keyLabel="&lt;" />
+		<Key android:keyLabel="&gt;" />
+		<Key android:keyLabel="\?" />
+		<Key android:isRepeatable="true" android:keyWidth="9.35%p"
+			android:keyIcon="@drawable/arrow_up_float" android:codes="-116" />
+		<Key android:keyWidth="9.35%p" android:codes="-120"
+			android:keyLabel="Del" />
+	</Row>
+	<Row>
+		<Key android:codes="-124" android:keyEdgeFlags="left"
+			android:keyWidth="9.35%p" android:isSticky="true" android:keyLabel="Ctrl" />
+		<Key android:codes="-123" android:isSticky="true"
+			android:keyWidth="9.35%p" android:keyIcon="@drawable/windows" />
+		<Key android:codes="-125" android:isSticky="true" android:keyWidth="9.35%p"
+			android:keyLabel="Alt" />
+		<Key android:isRepeatable="true" android:keyWidth="9.35%p"
+			android:codes="-121" android:keyIcon="@drawable/sym_keyboard_pageup" />
+		<Key android:isRepeatable="true" android:keyWidth="9.35%p"
+			android:codes="-122" android:keyIcon="@drawable/sym_keyboard_pagedown" />
+		<Key android:isRepeatable="true" android:keyWidth="25.24%p"
+			android:keyIcon="@drawable/sym_keyboard_space" android:codes="32" />
+		<Key android:isRepeatable="true" android:keyWidth="9.35%p"
+			android:keyIcon="@drawable/arrow_left_float" android:codes="-119" />
+		<Key android:isRepeatable="true" android:keyWidth="9.35%p"
+			android:keyIcon="@drawable/arrow_down_float" android:codes="-117" />
+		<Key android:isRepeatable="true" android:keyWidth="9.35%p"
+			android:keyIcon="@drawable/arrow_right_float" android:codes="-118" />
+	</Row>
+</Keyboard>

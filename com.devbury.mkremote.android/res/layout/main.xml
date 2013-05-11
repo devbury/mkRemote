@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2009-2013 devBury LLC
+  ~
+  ~   This file is part of mkRemote.
+  ~
+  ~   mkRemote is free software: you can redistribute it and/or modify
+  ~   it under the terms of the GNU General Public License Version 3
+  ~   as published by the Free Software Foundation.
+  ~
+  ~   mkRemote is distributed in the hope that it will be useful,
+  ~   but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~   GNU General Public License for more details.
+  ~
+  ~   You should have received a copy of the GNU General Public License
+  ~   along with mkRemote.  If not, see <http://www.gnu.org/licenses/gpl.txt/>.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageButton
+        android:id="@+id/top_spacer"
+        android:layout_width="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dot"
+        android:contentDescription=""></ImageButton>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dip"
+        android:src="@drawable/logo"
+        android:contentDescription=""></ImageView>
+
+    <RelativeLayout
+        android:id="@+id/touch_screen"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:id="@+id/scroll_ball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            android:src="@drawable/scroll_ball"
+            android:contentDescription=""></ImageView>
+    </RelativeLayout>
+    <!--
+	<com.admob.android.ads.AdView android:id="@+id/ad"
+		android:visibility="gone" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_below="@id/top_spacer" />
+	-->
+    <LinearLayout
+        android:id="@+id/buttonbar1"
+        android:layout_below="@id/top_spacer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/buttonbar1_lefthold"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/left_button_hold"
+            android:minHeight="68px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|fill_vertical|fill_horizontal"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:tag="@string/c_left_mouse_hold"
+            android:contentDescription="" />
+
+        <ImageButton
+            android:id="@+id/buttonbar1_left"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/left_button"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:tag="@string/c_left_mouse_click"
+            android:contentDescription="" />
+
+        <ImageButton
+            android:id="@+id/buttonbar1_middle"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/middle_button"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:tag="@string/c_middle_mouse_click"
+            android:contentDescription="" />
+
+        <ImageButton
+            android:id="@+id/buttonbar1_middlehold"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/middle_button_hold"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:tag="@string/c_middle_mouse_hold"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar1_right"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/right_button"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:tag="@string/c_right_mouse_click"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar1_righthold"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/right_button_hold"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_right_mouse_hold"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar1_esc"
+            android:src="@drawable/esc"
+            android:background="@drawable/button_bar_normal"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_esc"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar1_f5"
+            android:src="@drawable/f5"
+            android:background="@drawable/button_bar_normal"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_f5"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar1_pageup"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/pageup_button"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_page_up"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar1_pagedown"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/pagedown_button"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_page_down"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar1_enter"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/enter"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_enter"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar1_maximize"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/maximize"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_maximize"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar1_show_virtual_keyboard"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/keyboard"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_show_virtual_keyboard"
+            android:contentDescription=""></ImageButton>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonbar2"
+        android:layout_below="@id/buttonbar1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/buttonbar2_lefthold"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/left_button_hold"
+            android:minHeight="68px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:visibility="gone"
+            android:tag="@string/c_left_mouse_hold"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar2_left"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/left_button"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:tag="@string/c_left_mouse_click"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar2_middle"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/middle_button"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:tag="@string/c_middle_mouse_click"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar2_middlehold"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/middle_button_hold"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:tag="@string/c_middle_mouse_hold"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar2_right"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/right_button"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:tag="@string/c_right_mouse_click"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar2_righthold"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/right_button_hold"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_right_mouse_hold"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar2_esc"
+            android:src="@drawable/esc"
+            android:background="@drawable/button_bar_normal"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_esc"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar2_f5"
+            android:src="@drawable/f5"
+            android:background="@drawable/button_bar_normal"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_f5"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar2_pageup"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/pageup_button"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_page_up"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar2_pagedown"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/pagedown_button"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_page_down"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar2_enter"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/enter"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_enter"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar2_maximize"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/maximize"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_maximize"
+            android:contentDescription=""></ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonbar2_show_virtual_keyboard"
+            android:background="@drawable/button_bar_normal"
+            android:src="@drawable/keyboard"
+            android:minHeight="68px"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:tag="@string/c_show_virtual_keyboard"
+            android:contentDescription=""></ImageButton>
+        l
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/macrobar"
+        android:layout_below="@id/buttonbar2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/macrobar_delay"
+            android:minHeight="68px"
+            android:background="@drawable/button_bar_normal"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:text="@string/delay"
+            android:textColor="@android:color/darker_gray"
+            android:typeface="monospace"
+            android:textStyle="bold"
+            android:layout_weight="1"></Button>
+
+        <Button
+            android:id="@+id/macrobar_end_macro"
+            android:minHeight="68px"
+            android:background="@drawable/button_bar_normal"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:text="@string/end_macro"
+            android:textColor="@android:color/darker_gray"
+            android:typeface="monospace"
+            android:textStyle="bold"
+            android:layout_weight="1"></Button>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/boxee_remote"
+        android:layout_below="@id/macrobar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/boxee_dpad"
+            android:layout_alignParentTop="true"
+            android:layout_width="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boxeepad">
+
+            <ImageView
+                android:id="@+id/boxee_dpad_up"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="93px"
+                android:layout_width="133px"
+                android:background="@drawable/dot"
+                android:visibility="visible"
+                android:contentDescription=""></ImageView>
+
+            <ImageView
+                android:id="@+id/boxee_dpad_right"
+                android:layout_below="@id/boxee_dpad_up"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_height="133px"
+                android:layout_width="93px"
+                android:background="@drawable/dot"
+                android:visibility="visible"
+                android:contentDescription=""></ImageView>
+
+            <ImageView
+                android:id="@+id/boxee_dpad_left"
+                android:layout_below="@id/boxee_dpad_up"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_height="133px"
+                android:layout_width="93px"
+                android:background="@drawable/dot"
+                android:visibility="visible"
+                android:contentDescription=""></ImageView>
+
+            <ImageView
+                android:id="@+id/boxee_dpad_down"
+                android:layout_below="@id/boxee_dpad_right"
+                android:layout_centerHorizontal="true"
+                android:layout_height="93px"
+                android:layout_width="133px"
+                android:background="@drawable/dot"
+                android:visibility="visible"
+                android:contentDescription=""></ImageView>
+
+            <ImageView
+                android:id="@+id/boxee_dpad_back"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/boxee_dpad_up"
+                android:layout_above="@id/boxee_dpad_left"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@drawable/dot"
+                android:visibility="visible"
+                android:contentDescription=""></ImageView>
+
+            <ImageView
+                android:id="@+id/boxee_dpad_mute"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/boxee_dpad_up"
+                android:layout_above="@id/boxee_dpad_right"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@drawable/dot"
+                android:visibility="visible"
+                android:contentDescription=""></ImageView>
+
+            <ImageView
+                android:id="@+id/boxee_dpad_stop"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/boxee_dpad_down"
+                android:layout_below="@id/boxee_dpad_left"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@drawable/dot"
+                android:visibility="visible"
+                android:contentDescription=""></ImageView>
+
+            <ImageView
+                android:id="@+id/boxee_dpad_pause"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/boxee_dpad_down"
+                android:layout_below="@id/boxee_dpad_right"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@drawable/dot"
+                android:visibility="visible"
+                android:contentDescription=""></ImageView>
+
+            <ImageView
+                android:id="@+id/boxee_dpad_center"
+                android:layout_below="@id/boxee_dpad_up"
+                android:layout_above="@id/boxee_dpad_down"
+                android:layout_toLeftOf="@id/boxee_dpad_right"
+                android:layout_toRightOf="@id/boxee_dpad_left"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@drawable/dot"
+                android:visibility="visible"
+                android:contentDescription=""></ImageView>
+        </RelativeLayout>
+
+        <SeekBar
+            android:id="@+id/boxee_seek"
+            android:layout_below="@id/boxee_dpad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="35dip"
+            android:layout_marginLeft="25dip"
+            android:layout_marginRight="25dip"
+            android:max="100"
+            android:visibility="gone"></SeekBar>
+    </RelativeLayout>
+
+    <com.devbury.mkremote.LockSlider
+        android:id="@+id/drawer"
+        android:layout_alignParentBottom="true"
+        android:animateOnClick="true"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:handle="@+id/statusbar"
+        android:content="@+id/mini_keyboard">
+
+        <RelativeLayout
+            android:id="@id/statusbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/statusbar"
+            android:gravity="center_vertical|right">
+
+            <ImageView
+                android:id="@+id/lock"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/unlock"
+                android:contentDescription=""></ImageView>
+
+            <TextView
+                android:id="@+id/server_info"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:typeface="monospace"
+                android:textStyle="bold"
+                android:text="@string/not_connected"
+                android:visibility="visible"
+                android:textColor="@android:color/darker_gray"></TextView>
+        </RelativeLayout>
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@id/mini_keyboard"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:keyBackground="@drawable/btn_keyboard_key"
+            android:background="@drawable/slider_background"></android.inputmethodservice.KeyboardView>
+    </com.devbury.mkremote.LockSlider>
+</RelativeLayout>
