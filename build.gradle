@@ -1,9 +1,18 @@
+project.ext {
+    versionCode = 0;
+}
+
 allprojects {
   version = '2.0.0-SNAPSHOT'
+  versionCode = 20
 }
 
 subprojects {
   repositories {
     mavenCentral()
   }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion '1.6'
 }

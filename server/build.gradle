@@ -18,7 +18,6 @@
 
 apply plugin: 'application'
 
-
 mainClassName = 'com.devbury.desktoplib.systemtray.SystemTrayApplication'
 
 dependencies {
@@ -29,3 +28,5 @@ dependencies {
             'org.slf4j:slf4j-api:1.6.4'
     runtime 'org.slf4j:slf4j-log4j12:1.6.4'
 }
+
+build.dependsOn distZip

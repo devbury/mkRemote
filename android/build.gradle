@@ -14,8 +14,16 @@ dependencies {
     compile project(':api')
 }
 
+project.archivesBaseName =  'mkRemote-' + version
+
 android {
     compileSdkVersion 7
+    buildToolsVersion '17.0'
+
+    defaultConfig {
+        versionName version
+        versionCode versionCode
+    }
 
     sourceSets {
         main {
