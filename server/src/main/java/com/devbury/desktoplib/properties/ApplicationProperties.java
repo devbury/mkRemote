@@ -25,7 +25,7 @@ public class ApplicationProperties {
     public static Collection<String> getLoggingPropertiesFiles() {
         ArrayList<String> al = new ArrayList<String>();
         al.add(System.getProperty("user.home") + "/devbury.properties");
-        al.add(System.getProperty("user.home") + "/mkremote.properties");
+        al.add(System.getProperty("app.home") + "/config/mkremote.properties");
         return al;
     }
 

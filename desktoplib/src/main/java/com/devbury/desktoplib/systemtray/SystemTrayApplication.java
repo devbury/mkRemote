@@ -35,13 +35,17 @@ public class SystemTrayApplication {
 
     public static final String BASE_CONTEXT = "classpath:com/devbury/desktoplib/systemtray/SystemTrayApplicationBaseContext.xml";
     public static final String APPLICATION_CONTEXT = "classpath:SystemTrayApplicationContext.xml";
-    private Logger logger = LoggerFactory
-            .getLogger(SystemTrayApplication.class);
+    private Logger logger = LoggerFactory.getLogger(SystemTrayApplication.class);
     private String[] args;
     private ClassPathXmlApplicationContext applicationContext;
-    private String[] configLocations = {BASE_CONTEXT, APPLICATION_CONTEXT};
+    private String[] configLocations = { BASE_CONTEXT, APPLICATION_CONTEXT };
 
     public static void main(String[] args) {
+        String appHome = System.getenv("APP_HOME");
+        System.out.println("app home is " + appHome);
+        if (appHome != null) {
+            System.setProperty("app.home", appHome);
+        }
         SystemTrayApplication sta = newSystemTrayApplication();
         sta.setArgs(args);
         sta.configureLogging();
@@ -61,31 +65,23 @@ public class SystemTrayApplication {
         logSystemInfo();
         try {
             if (!isSystemTraySupported()) {
-                JOptionPane
-                        .showMessageDialog(
-                                null,
-                                "Could not start application.  This application requires system tray support and your platform "
-                                        + "does not provide this.",
-                                "System Tray Not Supported",
-                                JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null,
+                        "Could not start application.  This application requires system tray support and your platform "
+                                + "does not provide this.", "System Tray Not Supported", JOptionPane.ERROR_MESSAGE);
                 throw new RuntimeException("SystemTray is not supported");
             } else {
                 logger.debug("SystemTray is supported");
             }
             if (applicationContext == null) {
                 String[] locations = buildConfigLocations();
-                logger.debug("Creating context from "
-                        + configLocationsToString(locations));
-                applicationContext = new ClassPathXmlApplicationContext(
-                        locations);
+                logger.debug("Creating context from " + configLocationsToString(locations));
+                applicationContext = new ClassPathXmlApplicationContext(locations);
                 logger.debug("Context finished building");
             }
             // get the TrayIconDefinition instances
-            Map defs = applicationContext
-                    .getBeansOfType(TrayIconDefinition.class);
+            Map defs = applicationContext.getBeansOfType(TrayIconDefinition.class);
             if (defs == null || defs.isEmpty()) {
-                throw new RuntimeException(
-                        "No TrayIconDefinition instances exist in the context");
+                throw new RuntimeException("No TrayIconDefinition instances exist in the context");
             }
             SystemTray tray = newSystemTray();
             Iterator<TrayIconDefinition> it = defs.values().iterator();
@@ -101,8 +97,7 @@ public class SystemTrayApplication {
                 }
             }
             // get the monitor object out of the context to block on
-            Object monitor = applicationContext
-                    .getBean("applicationShutdownService");
+            Object monitor = applicationContext.getBean("applicationShutdownService");
 
             // if there was a splash screen shut it down
             SplashScreen splash = newSplashScreen();
@@ -179,8 +174,7 @@ public class SystemTrayApplication {
         return applicationContext;
     }
 
-    public void setApplicationContext(
-            ClassPathXmlApplicationContext applicationContext) {
+    public void setApplicationContext(ClassPathXmlApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
     }
 

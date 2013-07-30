@@ -18,6 +18,7 @@
 
 apply plugin: 'application'
 
+applicationName = 'mkRemoteServer'
 mainClassName = 'com.devbury.desktoplib.systemtray.SystemTrayApplication'
 
 dependencies {
